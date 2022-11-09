@@ -23,13 +23,13 @@
   export default {
       name: 'CategoryView',
       components : {CategoryBox},
-      props:["baseURL","products"],
+      props:["baseURL"],
       methods: {
-          getCategories() {
+          async getCategories() {
               //fetch categories
-              axios.get(this.baseURL + "category/")
-                  .then(res => this.categories = res.data)
-                  .catch(err => console.log(err))
+              await axios.get(this.baseURL + "category/")
+              .then(res => this.categories = res.data)
+              .catch(err => console.log(err))
           }
       },
       mounted(){
