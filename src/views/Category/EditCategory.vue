@@ -53,7 +53,7 @@ export default {
         imageUrl : this.imageUrl,
       }
 
-      await axios(this.baseURL+"category/update/"+this.id,updatedCategory)
+      await axios.post(this.baseURL+"category/update/"+this.id,updatedCategory)
       .then(() => {
         swal({
           text: "Category Updated Successfully!",
