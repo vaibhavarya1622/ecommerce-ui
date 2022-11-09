@@ -22,7 +22,7 @@
     export default{
         name:'ProductView',
         components:{ ProductBox },
-        props:["baseUrl","products"],
+        props:["baseURL","products"],
         mounted(){
 
         }

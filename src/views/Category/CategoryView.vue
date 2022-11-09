@@ -23,7 +23,7 @@
   export default {
       name: 'CategoryView',
       components : {CategoryBox},
-      props:["baseUrl","products"],
+      props:["baseURL","products"],
       methods: {
           async getCategories() {
               //fetch categories
