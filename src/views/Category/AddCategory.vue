@@ -51,7 +51,7 @@ export default {
         imageUrl : this.imageURL,
       };
 
-      await axios(this.baseURL+"category/create",newCategory)
+      await axios.post(this.baseURL+"category/create",newCategory)
       .then(() => {
         swal({
           text: "Category Added Successfully!",
