@@ -25,9 +25,9 @@
       components : {CategoryBox},
       props:["baseURL","products"],
       methods: {
-          async getCategories() {
+          getCategories() {
               //fetch categories
-              await axios.get(this.baseURL + "category/")
+              axios.get(this.baseURL + "category/")
                   .then(res => this.categories = res.data)
                   .catch(err => console.log(err))
           }
