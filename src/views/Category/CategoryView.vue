@@ -23,12 +23,7 @@
   export default {
       name: 'CategoryView',
       components : {CategoryBox},
-      data() {
-          return {
-              baseURL : "http://localhost:8080/",
-              categories : null,
-          }
-      },
+      props:["baseUrl","products"],
       methods: {
           async getCategories() {
               //fetch categories
