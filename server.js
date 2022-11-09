@@ -1,8 +1,11 @@
 const express = require('express')
 const serveStatic = require('serve-static')
 const path = require('path')
-
+var bodyParser = require('body-parser');
 const app = express()
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 //here we are configuring dist to serve app files
 app.use('/',serveStatic(path.join(__dirname,'/dist')))

@@ -77,14 +77,7 @@
                         password:this.password
                     }
                     //call the API
-                    await axios({
-                        method:'post',
-                        url:this.baseURL+"user/signup",
-                        data:JSON.stringify(user),
-                        headers:{
-                            'Content-type':'application/json'
-                        }
-                    })
+                    await axios.post(this.baseURL+"user/signup",user)
                     .then(()=>{
                         //redirect to home page
                         this.$router.replace("/");

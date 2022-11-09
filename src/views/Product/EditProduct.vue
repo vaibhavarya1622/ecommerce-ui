@@ -65,14 +65,7 @@
                     imageUrl: this.imageUrl,
                     price: this.price
                 }
-                await axios({
-                method: 'post',
-                url: this.baseURL+"product/update/"+this.id,
-                data: JSON.stringify(updatedProduct),
-                headers:{
-                    'Content-Type': 'application/json'
-                }
-                })
+                await axios.post(this.baseURL+"product/update/"+this.id,updatedProduct)
                 .then(()=>{
                     swal({
                         text:"Product Edited Successfully!!",

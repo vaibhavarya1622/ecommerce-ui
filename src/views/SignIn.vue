@@ -65,11 +65,7 @@
                     email:this.email,
                     password:this.password
                 }
-                await axios({
-                    method:'post',
-                    url:this.baseURL+'user/signin',
-                    data:user
-                })
+                await axios.post(this.baseURL+'user/signin',user)
                 .then((res)=>{
                     //login successful, will get token in response
                     localStorage.setItem('token',res.data.token);

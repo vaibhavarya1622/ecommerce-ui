@@ -42,6 +42,7 @@ export default {
       imageURL : null,
     }
   },
+  props:["baseURL"],
   methods : {
     async addCategory() {
       const newCategory = {
@@ -50,16 +51,7 @@ export default {
         imageUrl : this.imageURL,
       };
 
-      const baseURL =  "http://localhost:8080/";
-
-      await axios({
-        method: 'post',
-        url: baseURL+"category/create",
-        data : JSON.stringify(newCategory),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
+      await axios(this.baseURL+"category/create",newCategory)
       .then(() => {
         swal({
           text: "Category Added Successfully!",

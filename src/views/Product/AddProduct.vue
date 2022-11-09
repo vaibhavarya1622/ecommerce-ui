@@ -64,14 +64,7 @@ export default {
                 imageUrl: this.imageUrl,
                 price: this.price
             }
-            await axios({
-                method: 'post',
-                url: this.baseURL+"product/add",
-                data: JSON.stringify(newProduct),
-                headers:{
-                    'Content-Type': 'application/json'
-                }
-            })
+            await axios.post(this.baseURL+"product/add",newProduct)
             .then(()=>{
                 swal({
                     text:"Product Added Successfully!!",
