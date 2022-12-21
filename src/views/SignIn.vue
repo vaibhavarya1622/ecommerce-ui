@@ -74,8 +74,9 @@
                     swal({
                         text:"Login successful, Please continue",
                         icon:"success"
-                    })
-                    .catch(err=>{
+                    })    
+                })
+                .catch(err=>{
                         swal({
                             text:"Unable to log you in!!",
                             icon:"error",
@@ -83,9 +84,8 @@
                         })
                         console.log(err);
                     })
-                    .finally(()=>{
-                        this.loading=false;
-                    })
+                .finally(()=>{
+                    this.loading=false;
                 })
             }
         },
