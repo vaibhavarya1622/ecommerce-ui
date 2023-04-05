@@ -1,16 +1,10 @@
 runtime: nodejs16
 
 handlers:
-- url: /api/.*
-  script: this field needs to be updated with the name of your Java Servlet that handles your API requests
-  secure: always
-
-- url: /(.*\.(js|css|png|jpg|gif|svg|woff2|woff|ttf|eot|ico))$
-  static_files: dist/\1
-  upload: dist/.*\.(js|css|png|jpg|gif|svg|woff2|woff|ttf|eot|ico)$
-  secure: always
-
-- url: /.*
-  static_files: dist/index.html
-  upload: dist/index.html
-  secure: always
+- url: /(.*\..+)$
+    static_files: dist/\1
+    upload: dist/(.*\..+)$
+    # catch all handler to index.html
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
