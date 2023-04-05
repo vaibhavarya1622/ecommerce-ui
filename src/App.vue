@@ -23,7 +23,7 @@ import FooterComponent from "./components/FooterComponent.vue"
 export default {
   data() {
     return {
-      baseURL : "https://vaibhav-ecommerce-project.onrender.com/",
+      baseURL : "https://ecommerce-api-lwadvfmxnq-uc.a.run.app",
       products : null,
       categories : null
     }
