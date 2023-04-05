@@ -1,4 +1,4 @@
-runtime: java
+runtime: nodejs16
 
 handlers:
 - url: /api/.*
