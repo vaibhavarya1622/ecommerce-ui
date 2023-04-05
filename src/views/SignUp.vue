@@ -85,7 +85,7 @@
                             text:"User signup successfully, Please login",
                             icon:"success",
                             closeOnClickOutside:false,
-                        });
+                        },function(){window.location="/"});
                     })
                     .catch((err)=>{
                         console.log(err);

@@ -74,7 +74,7 @@
                     swal({
                         text:"Login successful, Please continue",
                         icon:"success"
-                    })    
+                    },function(){window.location="/"})    
                 })
                 .catch(err=>{
                         swal({

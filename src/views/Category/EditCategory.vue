@@ -59,7 +59,7 @@ export default {
           text: "Category Updated Successfully!",
           icon: "success",
           closeOnClickOutside: false,
-        });
+        },function(){window.location="/admin/category"});
       })
       .catch(err => console.log(err));
     }
