@@ -71,7 +71,7 @@
                         text:"Product Edited Successfully!!",
                         icon:"success",
                         closeOnClickOutside: false,
-                    },function(){window.location="/admin/product"});
+                    }).then(()=>{this.$router.replace("/admin/product")});
                 })
             .catch(err=>console.log(err));
             }

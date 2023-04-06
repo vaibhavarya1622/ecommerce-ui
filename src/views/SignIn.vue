@@ -74,7 +74,7 @@
                     swal({
                         text:"Login successful, Please continue",
                         icon:"success"
-                    },function(){window.location="/"})    
+                    }).then(()=>{this.$router.replace("/");});   
                 })
                 .catch(err=>{
                         swal({

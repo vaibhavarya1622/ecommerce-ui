@@ -80,12 +80,11 @@
                     await axios.post(this.baseURL+"user/signup",user)
                     .then(()=>{
                         //redirect to home page
-                        this.$router.replace("/");
                         swal({
                             text:"User signup successfully, Please login",
                             icon:"success",
                             closeOnClickOutside:false,
-                        },function(){window.location="/"});
+                        }).then(()=>{this.$router.replace("/");});
                     })
                     .catch((err)=>{
                         console.log(err);

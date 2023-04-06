@@ -57,7 +57,7 @@ export default {
           text: "Category Added Successfully!",
           icon: "success",
           closeOnClickOutside: false,
-        },function(){window.location="/admin/category"});
+        }).then(()=>{this.$router.replace("/admin/category")});
       })
       .catch(err => console.log(err));
     }
